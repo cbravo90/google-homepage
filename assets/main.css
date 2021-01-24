@@ -1,0 +1,170 @@
+* {
+    font-family: arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "nav nav"
+    "img img"
+    "search search"
+    "buttons buttons"
+    "pais pais"
+    "info info1";
+    height: 100vh;
+}
+
+nav {
+    display: grid;
+    grid-area: nav;
+    justify-items: end;
+    align-items: center;
+    max-height: 110px;
+    min-width: 500px;
+    width: auto;
+}
+
+li {
+    display:inline-block;
+    padding: 0 20px 0 10px;
+}
+
+nav a {
+    color: rgba(0,0,0,0.87);
+    font-size: 16px;
+}
+
+nav img {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+nav button {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(66, 133, 244);
+    border-color: rgb(66, 133, 244);
+    height: 30px;
+    width: 110px;
+}
+
+#logo {
+    display: grid;
+    grid-area: img;
+    justify-content: center;
+    align-items: center;
+}
+
+#search {
+    display: grid;
+    grid-area: search;
+    justify-items: center;
+    align-items: center;
+}
+
+
+#agrupa-barra {
+    display: inline-block;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 100px;
+}
+
+#lupa {
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+    padding: 0 0 0 20px;
+}
+
+input {
+    vertical-align: middle;
+    height: 50px;
+    width: 500px;
+    border: none;
+}
+
+@media (width:500px) {
+ input {
+     width: 400px;
+ }   
+}
+
+#micro {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    padding: 0 20px 0 0;
+}
+
+#botones {
+    display: grid;
+    grid-area: buttons;
+    justify-items: center;
+    align-items: center;
+}
+
+#agrupa-botones input {
+    display: inline-block;
+    width: 140px;    
+    height: 40px;
+    margin: 0 0 0 20px;
+}
+
+
+#pais {
+    position: relative;
+    top: 108px;
+    display: grid;
+    grid-area: pais;
+    justify-items: start;
+    align-items: center;
+    height: 50px;
+    border: 1px solid;
+    border-color: rgb(218 220 224);
+    background-color: rgb(242 242 242);
+    color: rgba(0,0,0,.54)
+}
+
+#pais p {
+    padding: 0 0 0 12px;
+}
+
+#info {
+    position: relative;
+    top: 50px;
+    display: grid;
+    grid-area: info;
+    justify-items: start;
+    align-items: center;
+    height: 58px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    border-color: rgb(218 220 224);
+    background-color: rgb(242 242 242);
+}
+
+#info a {
+    color: #70757a;
+}
+
+#info1 {
+    position: relative;
+    top: 50px;
+    display: grid;
+    grid-area: info1;
+    justify-items: end;
+    align-items: center;
+    height: 58px;    
+    border-right: 1px solid;
+    border-bottom: 1px solid;    
+    border-color: rgb(218 220 224);
+    background-color: rgb(242 242 242);
+}
+
+#info1 a {
+    color: #70757a;
+}
